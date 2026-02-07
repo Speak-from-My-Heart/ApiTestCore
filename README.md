@@ -1,4 +1,21 @@
-Nest open API for Elibrium
+# ApiTestCore
+
+Automated testing framework for REST API with focus on Role-Based Access Control (RBAC).
+
+## Features
+- Parametrized tests by user roles
+- RBAC matrix loaded from CSV
+- Secure API key handling via .env
+- Status code and response structure validation
+- Pytest fixtures and session-scoped data
+
+## Tech Stack
+- pytest
+- requests
+- python-dotenv
+
+
+Nest open API for
 
 1. Go to ApiTestCore in Terminal
 cd ~/Desktop/ApiTestCore
