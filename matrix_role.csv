@@ -3,3 +3,4 @@ show_card,200,200,200,200,403
 list_card,200,200,200,200,200
 update_card,200,200,403,200,403
 show_card_credential,200,200,403,200,403
+show_balance,200,200,200,403,403

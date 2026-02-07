@@ -30,6 +30,9 @@ class APIKeyProcessing():
         role = APIKeyProcessing.role_map[key]
         return role
 
+class BalanceRequestsEnvironment():
+    BASE_URL = "https://private.elibrium.io/api/v2"
+    SHOW_BALANCE = "/balance"
 
 class CardRequestsEnvironment():
     BASE_URL = "https://private.elibrium.io/api/v2"
