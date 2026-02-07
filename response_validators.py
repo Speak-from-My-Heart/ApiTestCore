@@ -1,7 +1,7 @@
 from cards_requests import CardsReqests
 from request_parameters import CardRequestsEnvironment
 
-class ShouldCard(CardsReqests):
+class ResponseValidators(CardsReqests):
     def should_be_correct_body(self, response):
         missing_keys = CardRequestsEnvironment().EXPECTED_TOP_LEVEL_ELEMENTS_GET_CARD - set(response.json())
         assert not missing_keys, f"Отсутствуют обязательные ключи: {', '.join(missing_keys)}"
