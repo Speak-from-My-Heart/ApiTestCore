@@ -11,7 +11,7 @@ from response_validators import ResponseValidators
 def test_can_give_status_code(api_key, rbac_func):
     endpoint_name = "show_balance"
     role = APIKeyProcessing().role_by_API_KEY(api_key)
-    response = BalanceReqests().show_card(api_key)
+    response = BalanceReqests().show_balance(api_key)
     print(response.status_code)
     ResponseValidators().should_be_correct_status_code(response, endpoint_name,role, rbac_func)
     #ShouldGetCard().should_be_correct_body(response)
