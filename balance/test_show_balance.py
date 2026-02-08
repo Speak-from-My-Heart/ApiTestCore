@@ -1,6 +1,6 @@
 import pytest
 from balance_request import BalanceReqests
-from request_parameters import APIKeyProcessing
+from request_parameters import APIKeyProcessing, environment
 from response_validators import ResponseValidators
 
 @pytest.mark.parametrize('api_key', [APIKeyProcessing.API_KEY_OWNER,
@@ -13,5 +13,5 @@ def test_can_give_status_code(api_key, rbac_func):
     role = APIKeyProcessing().role_by_API_KEY(api_key)
     response = BalanceReqests().show_balance(api_key)
     print(response.status_code)
-    ResponseValidators().should_be_correct_status_code(response, endpoint_name,role, rbac_func)
+    ResponseValidators(card_request_environment=environment).should_be_correct_status_code(response, endpoint_name,role, rbac_func)
     #ShouldGetCard().should_be_correct_body(response)

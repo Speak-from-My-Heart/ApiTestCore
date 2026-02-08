@@ -1,9 +1,11 @@
-from cards_requests import CardsReqests
 from request_parameters import CardRequestsEnvironment
 
-class ResponseValidators(CardsReqests):
+class ResponseValidators():
+    def __init__ (self, card_request_environment: CardRequestsEnvironment):
+        self.card_request_environment = card_request_environment
+
     def should_be_correct_body(self, response):
-        missing_keys = CardRequestsEnvironment().EXPECTED_TOP_LEVEL_ELEMENTS_GET_CARD - set(response.json())
+        missing_keys = self.card_request_environment.EXPECTED_TOP_LEVEL_ELEMENTS_GET_CARD - set(response.json())
         assert not missing_keys, f"Отсутствуют обязательные ключи: {', '.join(missing_keys)}"
 
     def should_be_correct_status_code(self, response, endpoint_name,role, rbac_func):

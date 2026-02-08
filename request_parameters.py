@@ -92,3 +92,5 @@ class CardRequestsEnvironment():
         "title": "Owner on API",
         "state": 2
     }
+
+environment = CardRequestsEnvironment()
