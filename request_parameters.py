@@ -32,6 +32,9 @@ class APIKeyProcessing():
         role = APIKeyProcessing.role_map[key]
         return role
 
+class AccountRequestsEnvironment():
+    LIST_ACCOUNT = "/accounts"
+
 class BalanceRequestsEnvironment():
     SHOW_BALANCE = "/balance"
 
