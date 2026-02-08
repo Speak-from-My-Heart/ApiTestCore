@@ -5,7 +5,7 @@ import csv
 @pytest.fixture(scope="session")
 def rbac_func():
     data = {}
-    with open("matrix_role.csv") as f:
+    with open("src/matrix_role.csv") as f:
         reader = csv.DictReader(f)
         for row in reader:
             endpoint = row.pop("endpoint_name")

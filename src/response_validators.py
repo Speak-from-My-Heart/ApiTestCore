@@ -1,4 +1,4 @@
-from request_parameters import CardRequestsEnvironment
+from src.request_parameters import CardRequestsEnvironment
 
 class ResponseValidators():
     def __init__ (self, card_request_environment: CardRequestsEnvironment):

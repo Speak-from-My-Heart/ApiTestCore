@@ -1,7 +1,7 @@
 import pytest
-from accounts_requests import AccountsRequests
-from request_parameters import APIKeyProcessing, environment
-from response_validators import ResponseValidators
+from src.request_parameters import APIKeyProcessing, environment
+from src.response_validators import ResponseValidators
+from src.requests.accounts_requests import AccountsRequests
 
 @pytest.mark.parametrize('api_key', [APIKeyProcessing.API_KEY_OWNER,
                                      APIKeyProcessing.API_KEY_ADMIN,

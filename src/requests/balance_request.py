@@ -1,5 +1,5 @@
 import requests
-from request_parameters import RequestParameters, BalanceRequestsEnvironment
+from src.request_parameters import RequestParameters, BalanceRequestsEnvironment
 
 class BalanceReqests(BalanceRequestsEnvironment):
     def show_balance(self, api_key):

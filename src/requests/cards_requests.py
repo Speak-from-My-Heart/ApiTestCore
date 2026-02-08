@@ -1,5 +1,5 @@
 import requests
-from request_parameters import RequestParameters, CardRequestsEnvironment
+from src.request_parameters import RequestParameters, CardRequestsEnvironment
 
 class CardsReqests():
     def __init__ (self, card_request_environment: CardRequestsEnvironment):

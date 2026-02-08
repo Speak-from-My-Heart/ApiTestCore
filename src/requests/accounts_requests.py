@@ -1,5 +1,5 @@
 import requests
-from request_parameters import RequestParameters, AccountRequestsEnvironment
+from src.request_parameters import RequestParameters, AccountRequestsEnvironment
 
 class AccountsRequests(AccountRequestsEnvironment):
     def list_accounts(self, api_key):
