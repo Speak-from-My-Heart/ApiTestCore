@@ -2,6 +2,8 @@ import os
 from dotenv import load_dotenv
 
 class RequestParameters():
+    BASE_URL = "https://private.elibrium.io/api/v2"
+    
     def Constant_Headers(self, token):
         Headers = {
             "Authorization": f"Bearer {token}",
@@ -31,12 +33,9 @@ class APIKeyProcessing():
         return role
 
 class BalanceRequestsEnvironment():
-    BASE_URL = "https://private.elibrium.io/api/v2"
     SHOW_BALANCE = "/balance"
 
 class CardRequestsEnvironment():
-    BASE_URL = "https://private.elibrium.io/api/v2"
-
     SHOW_CARD = "/cards/card_1pjnK6Okr9fUhNYBrniDTA0Y"
     UPDATE_CARD = "/cards/card_1pjnK6Okr9fUhNYBrniDTA0Y"
     LIST_CARD = "/cards"

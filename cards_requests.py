@@ -4,7 +4,7 @@ from request_parameters import RequestParameters, CardRequestsEnvironment
 class CardsReqests(CardRequestsEnvironment):
     def show_card(self, api_key):
         response = requests.get(
-            CardRequestsEnvironment.BASE_URL + CardRequestsEnvironment.SHOW_CARD,
+            RequestParameters.BASE_URL + CardRequestsEnvironment.SHOW_CARD,
             headers = RequestParameters().Constant_Headers(api_key),
             json = CardRequestsEnvironment.BODY_SHOW_CARD
         ) 
@@ -12,7 +12,7 @@ class CardsReqests(CardRequestsEnvironment):
     
     def show_card_credential(self, api_key):
         response = requests.get(
-            CardRequestsEnvironment.BASE_URL + CardRequestsEnvironment.SHOW_CARD,
+            RequestParameters.BASE_URL + CardRequestsEnvironment.SHOW_CARD,
             headers = RequestParameters().Constant_Headers(api_key),
             json = CardRequestsEnvironment.BODY_SHOW_CARD_CREDENTIAL,
             params = CardRequestsEnvironment.PARAMS_SHOW_CARD_CREDENTIAL
@@ -21,7 +21,7 @@ class CardsReqests(CardRequestsEnvironment):
     
     def list_card(self, api_key):
         response = requests.get(
-            CardRequestsEnvironment.BASE_URL + CardRequestsEnvironment.LIST_CARD,
+            RequestParameters.BASE_URL + CardRequestsEnvironment.LIST_CARD,
             headers = RequestParameters().Constant_Headers(api_key),
             json = CardRequestsEnvironment.BODY_LIST_CARD
         ) 
@@ -29,7 +29,7 @@ class CardsReqests(CardRequestsEnvironment):
     
     def update_card(self, api_key):
         response = requests.put(
-            CardRequestsEnvironment.BASE_URL + CardRequestsEnvironment.UPDATE_CARD,
+            RequestParameters.BASE_URL + CardRequestsEnvironment.UPDATE_CARD,
             headers = RequestParameters().Constant_Headers(api_key),
             json = CardRequestsEnvironment.BODY_UPDATE_CARD
         ) 
