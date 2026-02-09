@@ -13,7 +13,7 @@ class CardsReqests():
         ) 
         return response
     
-    def show_card_credential(self, api_key):
+    def show_card_credential(self, api_key: str):
         response = requests.get(
             RequestParameters.BASE_URL + self.card_request_environment.SHOW_CARD,
             headers = RequestParameters().Constant_Headers(api_key),
@@ -22,7 +22,7 @@ class CardsReqests():
         ) 
         return response
     
-    def list_card(self, api_key):
+    def list_card(self, api_key: str):
         response = requests.get(
             RequestParameters.BASE_URL + self.card_request_environment.LIST_CARD,
             headers = RequestParameters().Constant_Headers(api_key),
@@ -30,7 +30,7 @@ class CardsReqests():
         ) 
         return response
     
-    def update_card(self, api_key):
+    def update_card(self, api_key: str):
         response = requests.put(
             RequestParameters.BASE_URL + self.card_request_environment.UPDATE_CARD,
             headers = RequestParameters().Constant_Headers(api_key),

@@ -8,7 +8,7 @@ from src.requests.cards_requests import CardsReqests
                                      APIKeyProcessing.API_KEY_ACCOUNTANT,
                                      APIKeyProcessing.API_KEY_GROUP_ADMIN,
                                      APIKeyProcessing.API_KEY_USER])
-def test_can_give_status_code(api_key, rbac_func):
+def test_can_give_status_code(api_key: str, rbac_func: dict):
     endpoint_name = "show_card"
     role = APIKeyProcessing().role_by_API_KEY(api_key)
     response = CardsReqests(card_request_environment=environment).show_card(api_key)
@@ -21,7 +21,7 @@ def test_can_give_status_code(api_key, rbac_func):
                                      APIKeyProcessing.API_KEY_ACCOUNTANT,
                                      APIKeyProcessing.API_KEY_GROUP_ADMIN,
                                      APIKeyProcessing.API_KEY_USER])
-def test_can_give_status_code_credential(api_key, rbac_func):
+def test_can_give_status_code_credential(api_key: str, rbac_func: dict):
     endpoint_name = "show_card_credential"
     role = APIKeyProcessing().role_by_API_KEY(api_key)
     response = CardsReqests(card_request_environment=environment).show_card_credential(api_key)

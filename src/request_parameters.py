@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 class RequestParameters():
     BASE_URL = "https://private.elibrium.io/api/v2"
     
-    def Constant_Headers(self, token):
+    def Constant_Headers(self, token: str):
         Headers = {
             "Authorization": f"Bearer {token}",
             "Accept": "application/json",
@@ -28,7 +28,7 @@ class APIKeyProcessing():
         API_KEY_USER: "user" 
     }
     
-    def role_by_API_KEY(self, key):
+    def role_by_API_KEY(self, key: str):
         role = APIKeyProcessing.role_map[key]
         return role
 
