@@ -48,3 +48,5 @@ cards.store (выпуск карты)
 +cards.credentials.show (смотреть креды конкретной карты)
 +cards.update (generic permission - used for title/state updates and archival) (изменять название/статус карты)
 cards.spending-controls.show
+123
+12
