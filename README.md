@@ -19,13 +19,13 @@ Nest open API for
 
 1. Go to ApiTestCore in Terminal
 cd ~/Desktop/ApiTestCore
-2. Created the environment in folder 
+2. Created the environment in folder
 python3 -m venv .venv
 3. Activate it
 source .venv/bin/activate
-4. Download frameworks pytest - base; 
-httpx - library for request (PUT/POST/GET); 
-pytest-httpx - for httpx; 
+4. Download frameworks pytest - base;
+httpx - library for request (PUT/POST/GET);
+pytest-httpx - for httpx;
 python-dotenv - for save Token/Base_URL/... in .env ????
 pip install --upgrade pip  //(upgrade version?)
 pip install pytest httpx python-dotenv
