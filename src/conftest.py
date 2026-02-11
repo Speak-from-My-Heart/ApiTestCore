@@ -12,4 +12,4 @@ def rbac_func():
             endpoint = row.pop("endpoint_name")
             data[endpoint] = {k: int(v) for k, v in row.items()}
 
-    return data
+    yield data
