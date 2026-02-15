@@ -1,8 +1,7 @@
 import pytest
 
-from src.request_parameters import APIKeyProcessing, environment
+from src.request_parameters import APIKeyProcessing
 from src.requests.accounts_requests import AccountsRequests
-from src.response_validators import ResponseValidators
 
 
 @pytest.mark.parametrize(
@@ -15,11 +14,9 @@ from src.response_validators import ResponseValidators
         APIKeyProcessing.API_KEY_USER,
     ],
 )
-def test_can_give_status_code(api_key: str, rbac_func: dict):
+def test_can_give_status_code(validators, api_key: str, rbac_func: dict):
     endpoint_name = "list_accounts"
     role = APIKeyProcessing().role_by_API_KEY(api_key)
     response = AccountsRequests().list_accounts(api_key)
     print(response.status_code)
-    ResponseValidators(
-        card_request_environment=environment
-    ).should_be_correct_status_code(response, endpoint_name, role, rbac_func)
+    validators.should_be_correct_status_code(response, endpoint_name, role, rbac_func)

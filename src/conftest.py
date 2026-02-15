@@ -2,6 +2,9 @@ import csv
 
 import pytest
 
+from src.request_parameters import environment
+from src.response_validators import ResponseValidators
+
 
 @pytest.fixture(scope="session")
 def rbac_func():
@@ -13,3 +16,8 @@ def rbac_func():
             data[endpoint] = {k: int(v) for k, v in row.items()}
 
     yield data
+
+
+@pytest.fixture(scope="module")
+def validators():
+    yield ResponseValidators(card_request_environment=environment)
